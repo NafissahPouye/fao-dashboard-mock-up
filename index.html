@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title> Réponse de la FAO à la crise pastorale </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" ype="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>
+        <link rel="stylesheet" type="text/css" href="css/site.css"/>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/crossfilter.v1.min.js"></script>
+        <script src="js/dc.min.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/dc.leaflet.js"></script>     
+    </head>
+    <body>
+      <div class="container-fluid" id='main-container'>
+        <div class='content'>
+          <div class='container'> <h4>Tableau de bord de la réponse de la FAO REOWA à la crise pastorale</h4>
+            <div class="row" style="padding-top: 10px;">
+                
+                <div class="col-md-12" style="text-align: justify;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        <div id="header" class="row"></div>
+        <div class="row">
+            
+            <div class="col-md-12" ></div>
+            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a> 
+            </div>
+         <div class="row"> 
+                <div class="col-md-6" style="text-align: left; font-size: 17px; padding-left: 70px"> Montant du financement reçu par pays</center>
+                <img src="financement.png" style ="width: 500px; height: 350px" >  
+                </div>
+                <div class="col-md-6" id="MapInform"></div>
+        </div> 
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 17px; padding-left: 70px">  Aliments de bétail </div>
+                          
+                             <img src="albetail.png" style ="width: 500px; height: 350px" > 
+						    
+                  </div>
+                  <div class="col-md-6">
+                       <div style="text-align: center; font-size: 17px"> Couverture sanitaire ( Bovins, petits ruminants)
+                          <div class="col-md-6"></div>
+                             <img src="cs.png" style ="width: 450px; height: 350px" > 
+                        </div> 
+				        	</div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Semences (Fourragères, Maraichères, Vivrières en Tonnes) </div>
+                          <div class="col-md-6">
+                             <img src="semence.png" style ="width: 500px; height: 350px" > 
+                
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="text-align: center; font-size: 17px"> Cash +, Cash non Conditionnel, Cash pour Travail
+                          <div class="col-md-6"></div>
+                             <img src="cash.png" style ="width: 500px; height: 350px" > 
+                        </div> 
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Outils aratoires </div>
+                          <div class="col-md-6">
+                             <img src="aratoire.png" style ="width: 500px; height: 350px" > 
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="font-size: 17px; padding-left: 40px"> Destockage (Bovins)  </div>
+                          <div class="col-md-6"></div>
+                             <img src="destock.png" style ="width: 500px; height: 350px" > 
+                        
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Capitalisation (Bovins,Petits Ruminans, Porcs, Volaille) </div>
+                          <div class="col-md-6">
+                             <img src="tete.png" style ="width: 500px; height: 350px" > 
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="font-size: 17px; padding-left: 50px"> Puits</div> 
+                          <div class="col-md-6"></div>
+                             <img src="puit.png" style ="width: 500px; height: 350px" > 
+                        
+                  </div>
+              </div>
+              <div id="header" class="row"></div>
+             <h4>Chiffres clés</h4>
+             <div class="row"> 
+               <div class="col-md-4"style="font-size: 15px; font-family: sans pro"> <b>8,2 millions</b> de personnes à assister pour (2018-2021) </div>
+               
+             <div class="col-md-4" style="font-size: 15px; font-family: sans pro"> <b>166.8 millions</b> de dollars requis par la FAO</div> 
+             <div class="col-md-4" style="font-size: 15px; font-family: sans pro"> <b>44,2 millions</b> de dollars ont été mobilisés jusqu’à présent</div> 
+              </div>
+              <div class="row"> 
+               <div class="col-md-4"style="font-size: 15px; font-family: sans pro">Gap de <b>122,6 millions</b> nécessaires soit 73.5% </div>
+               
+             <div class="col-md-4" style="font-size: 15px; font-family: sans pro"> <b>625 560</b> assistés au 25 Novembre 2018</div>
+              </div>
+        <div id="header" class="row"></div>
+        </div>
+
+        </div>
+          
+        <script src="js/bootstrap.min.js"></script>
+      <script src="js/site.js"></script>
+    </body>
+</html>
