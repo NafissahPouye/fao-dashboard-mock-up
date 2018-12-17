@@ -1,58 +1,47 @@
 var map = L.map('MapInform',
     {
-    
-        maxZoom: 18,
-        minZoom: 2,
-        zoomControl: false,
-
-       // scrollWheelZoom: false
+  
+        /*maxZoom: 18,
+        minZoom: 2,*/
+        zoomControl: false
     });
+ map.setView([12, 0], 10)
+ map.setZoom(3);
+L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v1/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
+    attribution: '<a href="http://mapbox.com">Mapbox</a>'
+}).addTo(map);
 
-//map.setView([20, 40], 1);
-map.setView([14, 14], 2)
-      .setZoom(4.6);
-//map.touchZoom.disable();
 map.doubleClickZoom.disable();
 map.scrollWheelZoom.disable();
-map.boxZoom.disable();
 map.keyboard.disable();
 map.dragging.disable();
-
 Winheight = $(window).height("#MapInform");
-     $("#MapInform").css("background-color","#FFFFFF");
+    // $("#MapInform").css("background-color","#FFFFFF");
      $('.leaflet-control-attribution').hide();
 
 var geojson;
-
-
 function highlightFeature(e) {
     var layer = e.target;
 
     layer.setStyle({
         weight: 5,
-        // color: '#ff4000', //'#3182bd', //'#666',
-        //dashArray: '',
-        //fillOpacity: 0.7
     });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
     }
-
 }
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 }
 
-
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        //click: zoomToFeature
     });
-    layer.bindPopup('<h4>'+ feature.properties['country_name'] +'</h4>');
+    layer.bindPopup('<h6>'+ feature.properties['country_name'] +'</h6>'+'</h6>'+'<h6>'+feature.properties['projet'] +' projets'+'</h6>'+'<h6>'+feature.properties['menage_beneficiaire'] +' ménages bénéficiaires');
     layer.on('mouseover', function (e) {
             this.openPopup();
         });
@@ -61,64 +50,55 @@ function onEachFeature(feature, layer) {
         });
 }
 
-
 function style(feature) {
-    if (feature.properties.personnes_ben == 1090000) {
+    if (feature.properties.projet == 6) {
         return {
 
-            fillColor: '#de2d26',
+            fillColor: '#d95f0e',
             weight: 2,
             opacity: 0.6,
-            color: '#de2d26',
+            color: '#d95f0e',
             fillOpacity: 0.8
         };
-    } else if (feature.properties.personnes_ben == 141200) {
+        } else if (feature.properties.projet == 5) {
         return {
 
-            fillColor: '#fc9272',
+            fillColor: '#d95f0e',
             weight: 2,
             opacity: 0.6,
+            color: '#d95f0e',
+            fillOpacity: 0.5
+        };
+    } else if (feature.properties.projet == 4) {
+        return {
 
-           color: '#fc9272',
-            //dashArray: '3',
-            fillOpacity: 0.5
-        };
-    } else if (feature.properties.personnes_ben == 92500) {
-        return {
-            fillColor: '#fc9272',
+            fillColor: '#fec44f',
             weight: 2,
             opacity: 0.6,
-            color: '#fc9272',
-            //dashArray: '3',
+            color: '#fec44f',
             fillOpacity: 0.5
         };
-    } else if (feature.properties.personnes_ben == 37500) {
+    } else if (feature.properties.projet == 3) {
         return {
-            fillColor: '#fbb4ae',
+            fillColor: '#ffeda0',
             weight: 2,
             opacity: 0.6,
-            color: '#fbb4ae',
-            //dashArray: '3',
+            color: '#ffeda0',
+            fillOpacity: 0.5
+        };
+    } else if (feature.properties.projet == 2) {
+        return {
+            fillColor: '#fff7bc',
+            weight: 2,
+            opacity: 0.6,
+            color: '#fff7bc',
             fillOpacity: 0.5
         };
     }
 }
 
-geojson = L.geoJson(data/faoCountries, {
+geojson = L.geoJson(faoCountry, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
 
-function getColor(d) {
-    return d > 1000 ? '#800026' :
-        d > 500 ? '#BD0026' :
-        d > 200 ? '#E31A1C' :
-        d > 100 ? '#FC4E2A' :
-        d > 50 ? '#FD8D3C' :
-        d > 20 ? '#FEB24C' :
-        d > 10 ? '#FED976' :
-        '#FFEDA0';
-}
-if (map.scrollWheelZoom) {
-  map.scrollWheelZoom.disable();
-}

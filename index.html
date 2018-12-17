@@ -13,90 +13,17 @@
         <script src="js/dc.min.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/dc.leaflet.js"></script>     
+        <script src="js/dc.leaflet.js"></script>
+        <script src="data/faoCountry.js"></script>     
     </head>
     <body>
       <div class="container-fluid" id='main-container'>
         <div class='content'>
-          <div class='container'> <h4>Tableau de bord de la réponse de la FAO REOWA à la crise pastorale</h4>
-            <div class="row" style="padding-top: 10px;">
-                
-                <div class="col-md-12" style="text-align: justify;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </div>
-            </div>
-        <div id="header" class="row"></div>
-        <div class="row">
-            
-            <div class="col-md-12" ></div>
-            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a> 
-            </div>
-         <div class="row"> 
-                <div class="col-md-6" style="text-align: left; font-size: 17px; padding-left: 70px"> Montant du financement reçu par pays</center>
-                <img src="financement.png" style ="width: 500px; height: 350px" >  
-                </div>
-                <div class="col-md-6" id="MapInform"></div>
-        </div> 
-              <div class="row">
-                  <div class="col-md-6">
-                       <div style="text-align: left; font-size: 17px; padding-left: 70px">  Aliments de bétail </div>
-                          
-                             <img src="albetail.png" style ="width: 500px; height: 350px" > 
-						    
-                  </div>
-                  <div class="col-md-6">
-                       <div style="text-align: center; font-size: 17px"> Couverture sanitaire ( Bovins, petits ruminants)
-                          <div class="col-md-6"></div>
-                             <img src="cs.png" style ="width: 450px; height: 350px" > 
-                        </div> 
-				        	</div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Semences (Fourragères, Maraichères, Vivrières en Tonnes) </div>
-                          <div class="col-md-6">
-                             <img src="semence.png" style ="width: 500px; height: 350px" > 
-                
-                </div>
-                  </div>
-                  <div class="col-md-6">
-                       <div style="text-align: center; font-size: 17px"> Cash +, Cash non Conditionnel, Cash pour Travail
-                          <div class="col-md-6"></div>
-                             <img src="cash.png" style ="width: 500px; height: 350px" > 
-                        </div> 
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Outils aratoires </div>
-                          <div class="col-md-6">
-                             <img src="aratoire.png" style ="width: 500px; height: 350px" > 
-                </div>
-                  </div>
-                  <div class="col-md-6">
-                       <div style="font-size: 17px; padding-left: 40px"> Destockage (Bovins)  </div>
-                          <div class="col-md-6"></div>
-                             <img src="destock.png" style ="width: 500px; height: 350px" > 
-                        
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                       <div style="text-align: left; font-size: 17px; padding-left: 70px"> Capitalisation (Bovins,Petits Ruminans, Porcs, Volaille) </div>
-                          <div class="col-md-6">
-                             <img src="tete.png" style ="width: 500px; height: 350px" > 
-                </div>
-                  </div>
-                  <div class="col-md-6">
-                       <div style="font-size: 17px; padding-left: 50px"> Puits</div> 
-                          <div class="col-md-6"></div>
-                             <img src="puit.png" style ="width: 500px; height: 350px" > 
-                        
-                  </div>
-              </div>
-              <div id="header" class="row"></div>
-             <h4>Chiffres clés</h4>
-             <div class="row"> 
+          <div class='container'> 
+            <h5><center>Tableau de bord de la réponse de la FAO REOWA à la crise pastorale</center></h5>
+            <div class="row">
+              <h5 style="font-family: sans pro; font-size: 18px; padding-left: 15px"> Chiffres clés</h5>
+              
                <div class="col-md-4"style="font-size: 15px; font-family: sans pro"> <b>8,2 millions</b> de personnes à assister pour (2018-2021) </div>
                
              <div class="col-md-4" style="font-size: 15px; font-family: sans pro"> <b>166.8 millions</b> de dollars requis par la FAO</div> 
@@ -107,12 +34,87 @@
                
              <div class="col-md-4" style="font-size: 15px; font-family: sans pro"> <b>625 560</b> assistés au 25 Novembre 2018</div>
               </div>
-        <div id="header" class="row"></div>
+           <div id="header" class="row" style="padding-top: 10px"></div>
+             
+           <!-- <div class=col-md-12> <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a> 
+           </div> -->   
+          
+            
+         <div class="row" style="padding-top: 10px"> 
+                
+                <div class="col-md-4" style="text-align: left; font-size: 15px; padding-left: 0px"> Ménages atteints par activités </center>
+                <img src="activite.png" style ="width: 330px; height: 300px" >  
+                </div>
+                <div class="col-md-4" style="text-align: left; font-size: 15px; padding-left: 0px"> Montant du financement reçu par pays</center>
+                <img src="chart.png" style ="width: 330px; height: 300px" >  
+                </div>
+                <div class="col-md-4"style="text-align: left; font-size: 15px; padding-left: 0px; padding-bottom: 10px"> Chloroplèthe des projets par pays</div>
+                <div class="col-md-4" id="MapInform" ></div>
         </div>
-
-        </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 15px; padding-left: 70px">  Aliments de bétail </div>
+                          
+                             <img src="albetail.png" style ="width: 500px; height: 350px" > 
+						    
+                  </div>
+                  <div class="col-md-6">
+                       <div style="text-align: center; font-size: 15px"> Couverture sanitaire ( Bovins, petits ruminants)
+                          <div class="col-md-6"></div>
+                             <img src="cs.png" style ="width: 450px; height: 350px" > 
+                        </div> 
+				        	</div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 15px; padding-left: 70px"> Semences (Fourragères, Maraichères, Vivrières en Tonnes) </div>
+                          <div class="col-md-6">
+                             <img src="semence.png" style ="width: 500px; height: 350px" > 
+                
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="text-align: center; font-size: 15px"> Cash +, Cash non Conditionnel, Cash pour Travail
+                          <div class="col-md-6"></div>
+                             <img src="cash.png" style ="width: 500px; height: 350px" > 
+                        </div> 
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 15px; padding-left: 70px"> Outils aratoires </div>
+                          <div class="col-md-6">
+                             <img src="aratoire.png" style ="width: 500px; height: 350px" > 
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="font-size: 15px; padding-left: 40px"> Destockage (Bovins)  </div>
+                          <div class="col-md-6"></div>
+                             <img src="destock.png" style ="width: 500px; height: 350px" > 
+                        
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                       <div style="text-align: left; font-size: 15px; padding-left: 70px"> Capitalisation (Bovins,Petits Ruminans, Porcs, Volaille) </div>
+                          <div class="col-md-6">
+                             <img src="tete.png" style ="width: 500px; height: 350px" > 
+                </div>
+                  </div>
+                  <div class="col-md-6">
+                       <div style="font-size: 15px; padding-left: 50px"> Puits</div> 
+                          <div class="col-md-6"></div>
+                             <img src="puit.png" style ="width: 500px; height: 350px" > 
+                        
+                  </div>
+              </div>
+              <div id="header" class="row"></div>
+         </div>   
+         </div> 
+   </div>
+        
           
         <script src="js/bootstrap.min.js"></script>
-      <script src="js/site.js"></script>
+      <script src="js/site1.js"></script>
     </body>
 </html>
