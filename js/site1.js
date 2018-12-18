@@ -41,7 +41,7 @@ function onEachFeature(feature, layer) {
         mouseover: highlightFeature,
         mouseout: resetHighlight,
     });
-    layer.bindPopup('<h6>'+ feature.properties['country_name'] +'</h6>'+'</h6>'+'<h6>'+feature.properties['projet'] +' projets'+'</h6>'+'<h6>'+feature.properties['menage_beneficiaire'] +' ménages bénéficiaires');
+    layer.bindPopup('<h6>'+ feature.properties['country_name']+ '</h6>' + '<h6>'+feature.properties['projet'] +' projets'+'</h6>'+'<h6>'+feature.properties['menage_beneficiaire'] +' ménages bénéficiaires'+'</h6>'+'<h6>'+'Montant du financement reçu: '+feature.properties['financement']+ ' millions de dollars'+'</h6>');
     layer.on('mouseover', function (e) {
             this.openPopup();
         });
